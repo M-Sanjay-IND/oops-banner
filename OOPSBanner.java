@@ -2,14 +2,17 @@
 public class OOPSBanner {
 
     public static void main(String[] args) {
-        String lines = "";
-        lines += String.join("", " ******  ", " ****** ", "   ******  ", "  ******  \n");
-        lines += String.join("", "*      * ", "*      *", "  *      * ", " *        \n");
-        lines += String.join("", "*      * ", "*      *", "  *      * ", " *        \n");
-        lines += String.join("", "*      * ", "*      *", "  *******  ", "  ******  \n");
-        lines += String.join("", "*      * ", "*      *", "  *        ", "        * \n");
-        lines += String.join("", "*      * ", "*      *", "  *        ", "        * \n");
-        lines += String.join("", " ******  ", " ****** ", "  *        ", "  ******  \n");
-        System.out.println(lines);
+        String[] lines = {
+                String.join("", " ******  ", " ****** ", "   ******  ", "  ******  \n"),
+                String.join("", "*      * ", "*      *", "  *      * ", " *        \n"),
+                String.join("", "*      * ", "*      *", "  *      * ", " *        \n"),
+                String.join("", "*      * ", "*      *", "  *******  ", "  ******  \n"),
+                String.join("", "*      * ", "*      *", "  *        ", "        * \n"),
+                String.join("", "*      * ", "*      *", "  *        ", "        * \n"),
+                String.join("", " ******  ", " ****** ", "  *        ", "  ******  \n")
+        };
+        for (String line : lines) {
+            System.out.print(line);
+        }
     }
 }
