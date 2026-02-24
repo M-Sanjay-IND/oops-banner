@@ -1,18 +1,51 @@
-
 public class OOPSBanner {
+    public static String[] getOPattern() {
+        return new String[] {
+                String.join("", " **** "),
+                String.join("", "*    *"),
+                String.join("", "*    *"),
+                String.join("", "*    *"),
+                String.join("", "*    *"),
+                String.join("", "*    *"),
+                String.join("", " **** ")
+        };
+    }
+
+    public static String[] getPPattern() {
+        return new String[] {
+                String.join("", " ***** "),
+                String.join("", "*     *"),
+                String.join("", "*     *"),
+                String.join("", "****** "),
+                String.join("", "*      "),
+                String.join("", "*      "),
+                String.join("", "*      ")
+        };
+    }
+
+    public static String[] getSPattern() {
+        return new String[] {
+                String.join("", " ***** "),
+                String.join("", "*       "),
+                String.join("", "*       "),
+                String.join("", " ***** "),
+                String.join("", "      *"),
+                String.join("", "      *"),
+                String.join("", " ***** ")
+        };
+    }
 
     public static void main(String[] args) {
-        String[] lines = {
-                String.join("", " ******  ", " ****** ", "   ******  ", "  ******  \n"),
-                String.join("", "*      * ", "*      *", "  *      * ", " *        \n"),
-                String.join("", "*      * ", "*      *", "  *      * ", " *        \n"),
-                String.join("", "*      * ", "*      *", "  *******  ", "  ******  \n"),
-                String.join("", "*      * ", "*      *", "  *        ", "        * \n"),
-                String.join("", "*      * ", "*      *", "  *        ", "        * \n"),
-                String.join("", " ******  ", " ****** ", "  *        ", "  ******  \n")
-        };
-        for (String line : lines) {
-            System.out.print(line);
+        String[] oPattern1 = getOPattern();
+        String[] oPattern2 = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+        String[] banner = new String[7];
+        for (int i = 0; i < 7; i++) {
+            banner[i] = String.join("  ", oPattern1[i], oPattern2[i], pPattern[i], sPattern[i]);
+        }
+        for (String line : banner) {
+            System.out.println(line);
         }
     }
 }
